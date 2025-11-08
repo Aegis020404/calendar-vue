@@ -15,8 +15,8 @@
       v-for="(monthName, index) in months"
       :key="index"
       class="month-item"
-      :class="{ selected: index === selectedMonth }"
-      @click="emit('select-month', index)"
+      :class="{ selected: index === selectedMonth - 1 }"
+      @click="emit('select-month', index + 1)"
     >
       <span>{{ monthName }}</span>
     </div>
