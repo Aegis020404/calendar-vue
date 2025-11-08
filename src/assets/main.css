@@ -1,0 +1,9 @@
+:root {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  --primary: #1240AB;
+  --secondary: #06266F;
+}
+.html, body {
+  background: #d6d6d6;
+}

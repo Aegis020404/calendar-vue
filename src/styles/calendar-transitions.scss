@@ -1,0 +1,63 @@
+/* Слайды для смены дней и для годов */
+//src/components/calendar/calendar-main.vue
+//src/components/calendar/calendar-year-picker.vue
+.slide-next-enter-from { transform: translateX(100%); opacity: 0; }
+.slide-next-enter-to { transform: translateX(0); opacity: 1; }
+.slide-next-leave-from { transform: translateX(0); opacity: 1; }
+.slide-next-leave-to { transform: translateX(-100%); opacity: 0; }
+
+.slide-prev-enter-from { transform: translateX(-100%); opacity: 0; }
+.slide-prev-enter-to { transform: translateX(0); opacity: 1; }
+.slide-prev-leave-from { transform: translateX(0); opacity: 1; }
+.slide-prev-leave-to { transform: translateX(100%); opacity: 0; }
+
+.slide-next-enter-active,
+.slide-next-leave-active,
+.slide-prev-enter-active,
+.slide-prev-leave-active { transition: all 0.1s ease; }
+/* Плавное появление CalendarMonthPicker сверху вниз */
+//src/components/calendar/calendar-main.vue
+.month-picker-slide-enter-from {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.month-picker-slide-enter-to {
+  transform: translateY(0);
+  opacity: 1;
+}
+.month-picker-slide-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+.month-picker-slide-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.month-picker-slide-enter-active,
+.month-picker-slide-leave-active {
+  transition: all 0.2s ease;
+}
+/* Плавное появление CalendarYearPicker снизу вверх */
+//src/components/calendar/calendar-main.vue
+.slide-up-enter-from {
+  transform: translateY(20px); /* снизу */
+  opacity: 0;
+}
+.slide-up-enter-to {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-up-leave-to {
+  transform: translateY(20px); /* вниз при закрытии */
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.2s ease;
+}
